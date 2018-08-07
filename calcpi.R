@@ -14,3 +14,4 @@ y <- runif(n)
 # Compute and output the value of pi
 pihat <- sum(x * x + y * y < 1) / n * 4
 save(pihat,file = args[length(args)])
+proc.time()

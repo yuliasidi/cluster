@@ -6,9 +6,9 @@ Requirements = ParallelSchedulingGroup == "stats group"
 should_transfer_files = YES
 when_to_transfer_output = ON_EXIT
 
-arguments = 10000000 out/data/pihat-$(Process).rds
-output    = out/output/pi-$(Process).Rout
-error     = out/error/pi-$(Process).err
-log       = out/log/pi.log
+arguments = 10000000 condor/data/pihat-$(Process).rds
+output    = condor/out/pi-$(Process).Rout
+error     = condor/err/pi-$(Process).err
+log       = condor/log/pi.log
 
 Queue 50
