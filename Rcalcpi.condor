@@ -1,0 +1,14 @@
+executable = calcpi.R
+universe = vanilla
+Requirements = ParallelSchedulingGroup == "stats group"
++AccountingGroup = "group_statistics_testjob.username"
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+
+arguments = 10000000 out/data/pihat-$(Process).rds
+output    = out/output/pi-$(Process).Rout
+error     = out/error/pi-$(Process).err
+log       = out/log/pi.log
+
+Queue 50
