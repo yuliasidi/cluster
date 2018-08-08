@@ -11,4 +11,4 @@ output    = condor/out/pi-$(Process).Rout
 error     = condor/err/pi-$(Process).err
 log       = condor/log/pi.log
 
-Queue 50
+Queue 5
