@@ -14,5 +14,12 @@ y <- runif(n)
 
 # Compute and output the value of pi
 pihat <- sum(x * x + y * y < 1) / n * 4
+
+path <- dirname(args[length(args)])
+
+if(!dir.exists(path))
+  dir.create(path,recursive = TRUE)
+
 saveRDS(pihat,file = args[length(args)])
+
 proc.time()

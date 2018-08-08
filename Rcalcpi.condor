@@ -1,5 +1,5 @@
 executable = calcpi.R
-universe = vanilla
+universe = no-save no-restore
 Requirements = ParallelSchedulingGroup == "stats group"
 +AccountingGroup = "group_statistics_testjob.username"
 
