@@ -1,14 +1,14 @@
 executable = calcpi.R
-universe = no-save no-restore
+universe = vanilla
 Requirements = ParallelSchedulingGroup == "stats group"
 +AccountingGroup = "group_statistics_testjob.username"
 
 should_transfer_files = YES
 when_to_transfer_output = ON_EXIT
 
-arguments = 10000000 condor/data/pihat-$(Process).rds
-output    = condor/out/pi-$(Process).Rout
-error     = condor/err/pi-$(Process).err
-log       = condor/log/pi.log
-
+arguments = 10000000 pihat-$(Process).rds
+output    = out/pi-$(Process).Rout
+error     = err/pi-$(Process).err
+log       = log/pi.log
+initialdir = condor
 Queue 5
