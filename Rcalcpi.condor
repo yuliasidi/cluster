@@ -7,10 +7,10 @@ should_transfer_files = YES
 when_to_transfer_output = ON_EXIT
 
 arguments = 10000000 data/pihat-$(Process).rds
-output    = out/pi-$(Process).Rout
-error     = err/pi-$(Process).err
-log       = log/pi.log
+output    = condor/out/pi-$(Process).Rout
+error     = condor/err/pi-$(Process).err
+log       = condor/log/pi.log
 
-transfer_output_files = data/pihat-$(Process).rds
+transfer_output_files = condor/data/pihat-$(Process).rds
 
 Queue 5
