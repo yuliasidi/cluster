@@ -11,8 +11,8 @@ output    = out/pi-$(Process).Rout
 error     = err/pi-$(Process).err
 log       = log/pi.log
 
-initialdir = $(directory)
-transfer_input_files = ../../ysidi/lib/
+initialdir = condor
+# transfer_input_files = ../../ysidi/lib/
 transfer_output_files = data/pihat-$(Process).rds
 
 Queue 5
